@@ -53,7 +53,7 @@ t.add_output(Output(
     Value=GetAtt(instance, 'PublicIp'),
 ))
 
-t.addoutput(Output(
+t.add_output(Output(
     'WebUrl',
     Description='Application endpoint',
     Value=Join('', ['http://', GetAtt(instance, 'PublicDnsName.'), ':', ApplicationPort]),
