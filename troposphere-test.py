@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from ipaddress import ip_network
 from ipify import get_ip
 from troposphere import Base64, ec2, GetAtt, Join, Output, Parameter, Ref, Template
