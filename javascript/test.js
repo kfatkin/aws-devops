@@ -31,7 +31,7 @@ switch(prompt('What is the weather like?')) {
         console.log('Unknown weather type');
         break;
 }
-*/
+
 
 for (let line = "#"; line.length < 8; line += "#")
   console.log(line);
@@ -72,3 +72,29 @@ for (let y = 0; y < size; y += 1) {
 }
 console.log(board);
 
+
+const square1 = (x) => {return x * x; };
+const square1 = x => x * x
+
+*/
+
+function mutliplier(factor) {
+    return number => number * factor;
+}
+
+let twice = multiplier(2);
+console.log(twice(5));
+
+function findSolution(target) { 
+    function find(current, history) { 
+        if (current = target) {
+            return history;
+        } else if (current > target) {
+            return null;
+        } else {
+            return find(current + 5, '(${history} + 5)') ||
+                   find(current * 3, '(${history} * 3)');
+        }
+    }
+    return find(1, "1");
+}
