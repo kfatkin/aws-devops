@@ -12,3 +12,4 @@ lambda_client.create_function(
     Handler='{0}.lambda_handler'.format(fn_name),
     Code={'ZipFile': open('{0}.zip'.format(fn_name), 'rb').read(), },
 )
+
