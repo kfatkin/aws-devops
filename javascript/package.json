@@ -1,0 +1,27 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Used for javascript testing",
+  "main": "scripts.js",
+  "dependencies": {
+    "aws-sdk": "^2.333.0",
+    "nodejs-latest": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kfatkin/aws-devops.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "kfatkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kfatkin/aws-devops/issues"
+  },
+  "homepage": "https://github.com/kfatkin/aws-devops#readme"
+}

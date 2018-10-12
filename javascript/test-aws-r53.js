@@ -2,18 +2,18 @@ var AWS = require('aws-sdk');
 var route53 = new AWS.Route53();
 
 var params = {
-        CallerReference: 'google.com-test3',
+        CallerReference: 'google.com-test5',
         HealthCheckConfig: {
-                    'FullyQualifiedDomainName': 'www.google.com', 
-                    'ResourcePath': '/', 
-                    'EnableSNI': false, 
-                    'Inverted': false, 
-                    'MeasureLatency': true, 
-                    'RequestInterval': 30, 
-                    'Type': 'HTTPS', 
-                    'Port': 443, 
-                    'FailureThreshold': 3,
-                    'Regions': [
+                    FullyQualifiedDomainName: 'www.google.com', 
+                    ResourcePath: '/', 
+                    EnableSNI: false, 
+                    Inverted: false, 
+                    MeasureLatency: true, 
+                    RequestInterval: 30, 
+                    Type: 'HTTPS', 
+                    Port: 443, 
+                    FailureThreshold: 3,
+                    Regions: [
                         'ap-northeast-1', 
                         'ap-southeast-1', 
                         'ap-southeast-2', 
@@ -30,3 +30,5 @@ route53.createHealthCheck(params, function(err, data) {
     if (err) console.log(err, err.stack); //an error occurred
     else     console.log(data);           //successful response
 });
+
+route53.listHealthChecks()
