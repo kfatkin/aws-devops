@@ -98,3 +98,7 @@ function findSolution(target) {
     }
     return find(1, "1");
 }
+
+console.log(findSolution(24));
+
+
