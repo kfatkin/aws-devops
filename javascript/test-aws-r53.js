@@ -1,8 +1,9 @@
 var AWS = require('aws-sdk');
 var route53 = new AWS.Route53();
 
+/*
 var params = {
-        CallerReference: 'google.com-test5',
+        CallerReference: 'google.com-test6',
         HealthCheckConfig: {
                     FullyQualifiedDomainName: 'www.google.com', 
                     ResourcePath: '/', 
@@ -30,5 +31,7 @@ route53.createHealthCheck(params, function(err, data) {
     if (err) console.log(err, err.stack); //an error occurred
     else     console.log(data);           //successful response
 });
+*/
 
-route53.listHealthChecks()
+r53_objs = route53.listHealthChecks()
+console.log(r53_objs)
