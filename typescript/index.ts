@@ -104,8 +104,6 @@ switch(grade) {
   }
 }
 
-*/
-
 // Loops
 var num:number = 5;
 var i:number;
@@ -121,4 +119,154 @@ var n:any = 'a v c';
 for (j in n) {
   console.log(n[j])
 }
+
+var m:number = 5;
+while (m > 5) {
+  console.log('Entered while');
+}
+
+do {
+  console.log('Entered do... while');
+} 
+while (m > 5);
+
+var i:number = 1;
+while (i <= 10) {
+  if (i % 5 == 0) {
+    console.log('The first multiple of 5 between 1 and 10 is: ' + i)
+    break;
+  }
+  i++
+}
+
+var num:number = 0;
+var count:number = 0;
+
+for (num = 0; num <=20; num++) {
+  if (num % 2 == 0) {
+    continue 
+  }
+  count++
+}
+console.log('The count of odd values between 0 and 20 is: ' + count) 
+
+var array:any = [10, 15, 30, 45, 60, 1000]
+var a:any
+
+for (a in array) {
+  console.log(array[a]);
+}
+
+var num:number = 5;
+var factorial:number = 1;
+
+while (num >= 1) {
+  factorial = factorial * num;
+  num--;
+}
+console.log('The factorial is ' + factorial)
+
+*/
+
+//Functions
+
+function test_params(n1:number, s1:string) {
+  console.log(n1);
+  console.log(s1);
+}
+
+test_params(1010, 'This is a test of the emergency code writing system')
+
+function disp_details(id:number, name:string, butt:boolean = true, mail_id?:string) {
+  console.log('ID: ', id);
+  console.log('Name: ', name);
+  var butt2:string = <string> <any> butt //butt is now of type string
+  console.log('Butt?: ', butt2)
+  if (mail_id != undefined) {
+    console.log('Email address: ', mail_id);
+  }
+}
+
+disp_details(1, 'Kevin', false, 'kfatkin@fuckyomotha.com');
+disp_details(2, 'Dana');
+
+// Rest parameters in a function
+function addNumbers(...nums2:number[]) {
+  var i;
+  var sum:number = 0;
+
+  for (i = 0; i < nums2.length; i++) {
+    sum = sum + nums2[i];
+  }
+  console.log('Sum of the numbers passed into the function: ', sum);
+}
+
+addNumbers(10, 15, 6, 881);
+addNumbers(10,10,10,10,10,10,10,10,10);
+
+var msg = function() {
+  return 'Hello World';
+}
+
+console.log(msg());
+
+var myFunction = new Function('a', 'b', 'return a * b'); 
+var x = myFunction(4, 3);
+console.log(x)
+
+function factorial(number) {
+  if (number <= 0) {
+    return 1;
+  } else {
+    return (number * factorial(number - 1));
+  }
+};
+
+console.log(factorial(6));
+
+var foo = (x:number) => 10 + x 
+console.log(foo(100))
+
+var foo = (x:number) => {
+  x = 10 + x
+  console.log(x)
+}
+foo(100)
+
+var func = (x) => {
+  if (typeof x == 'number') {
+    console.log(x + ' is numeric')
+  } else if (typeof x == 'string') {
+    console.log(x + ' is a string')
+  }
+}
+
+func(12)
+func('Kevin')
+ 
+var month = 0
+if (month <= 0 || month > 12) {
+  month  = Number.NaN
+  console.log("Month is " + month)
+} else {
+  console.log("Value Accepted")
+}
+
+function employee(id:number, name:string) {
+  this.id = id
+  this.name = name
+}
+
+var emp = new employee(123, 'Bob')
+employee.prototype.email = "bob@abc.com"
+
+console.log('Employee ID is ' + emp.id);
+console.log('Employee name is ' + emp.name);
+console.log('Employee email is ' + emp.email);
+console.log(emp)
+
+var num1 = 1223.30
+var val = num1.toExponential();
+console.log(val)
+
 
